@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>511</width>
+    <height>653</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Ainp5.2</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../Downloads/stop.png</normaloff>../../Downloads/stop.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QListWidget {
+     show-decoration-selected: 1; /* расширяет диапазон выделения на всю ширину представления */   
+          border-top: 3px solid#1a647f;
+border-bottom: 3px solid #1a647f;
+border-left:3px solid #1a647f;
+border-right:3px solid #1a647f;
+	border-left-color: qlineargradient(spread:repeat, x1:0.491975, y1:0.023, x2:0.50195, y2:0.96, stop:0 rgba(26, 100, 127, 255), stop:0.318408 rgba(255, 255, 255, 0), stop:0.681592 rgba(255, 255, 255, 0), stop:1 rgba(26, 100, 127, 255));
+border-right-color:qlineargradient(spread:repeat, x1:0.491975, y1:0.023, x2:0.50195, y2:0.96, stop:0 rgba(26, 100, 127, 255), stop:0.318408 rgba(255, 255, 255, 0), stop:0.681592 rgba(255, 255, 255, 0), stop:1 rgba(26, 100, 127, 255));
+background: #bac5c5;
+    }
+QTableWidget::section
+{
+spacing: 10px;
+background-color:lightblue;
+color: white;
+border: 1px solid red;
+margin: 1px;
+text-align: right;
+font-family: arial;
+font-size:12px;
+}
+QTableWidget {
+     show-decoration-selected: 1; /* расширяет диапазон выделения на всю ширину представления */   
+          border-top: 3px solid #1a647f;
+border-bottom: 3px solid #1a647f;
+border-left:3px solid #1a647f;
+border-right:3px solid #1a647f;
+border-left-color: qlineargradient(spread:repeat, x1:0.491975, y1:0.023, x2:0.50195, y2:0.96, stop:0 rgba(26, 100, 127, 255), stop:0.318408 rgba(255, 255, 255, 0), stop:0.681592 rgba(255, 255, 255, 0), stop:1 rgba(26, 100, 127, 255));
+border-right-color:qlineargradient(spread:repeat, x1:0.491975, y1:0.023, x2:0.50195, y2:0.96, stop:0 rgba(26, 100, 127, 255), stop:0.318408 rgba(255, 255, 255, 0), stop:0.681592 rgba(255, 255, 255, 0), stop:1 rgba(26, 100, 127, 255));
+background: #bac5c5;
+    }
+
+QWidget#widget
+{
+    border-style: solid;
+    border-width: 2px;
+    border-color:rgb(26, 100, 127);
+
+    background:#55627f;
+}
+QWidget#Form{
+    border-style: solid;
+    border-top-style: none;
+    border-width: 1px;
+    border-color: rgb(0, 100, 150);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(128, 128, 128, 255), stop:1 rgba(225, 225, 225, 180));
+}
+
+QMainWindow::separator:hover {
+    background: red;
+}
+ QSlider::groove:horizontal {
+     border: 0px solid;
+     height: 3px; /* по умолчанию бороздка расширяется до размеров ползунка. задав высоту она принимает фиксированный размер */
+
+     margin: 1px 0;
+ }
+
+ QSlider::handle:horizontal {
+     background:rgb(255, 79, 82);
+     border:0px;
+     width: 17px;
+     margin: -7px 0; /* рукоятка располагается по умолчанию в прямоугольнике содержимого бороздки. Расширяется наружу от бороздки */
+     border-radius: 8px;
+ }
+ QSlider::add-page:horizontal{
+     background: qlineargradient(spread:repeat, x1:1, y1:0, x2:0, y2:0, stop:0 rgba(255, 255, 255, 0), stop:1 rgb(255, 79, 82));
+}
+ 
+
+ QSlider::sub-page:horizontal{
+     background: qlineargradient(spread:repeat, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 255, 255, 0), stop:1 rgb(255, 79, 82));
+ }
+
+QScrollBar:horizontal {
+     border: 2px solid grey;
+     background: #55627f;
+     height: 20px;
+     margin: 0px 20px 0 20px;
+ }
+ QScrollBar::handle:horizontal {
+	
+     background: #55627f;
+     min-width: 20px;
+ }
+ QScrollBar::add-line:horizontal {
+     border: 2px solid grey;
+     background: #55627f;
+     width: 20px;
+     subcontrol-position: right;
+     subcontrol-origin: margin;
+ }
+
+ QScrollBar::sub-line:horizontal {
+     border: 2px solid grey;
+     background: #55627f;
+     width: 20px;
+     subcontrol-position: left;
+     subcontrol-origin: margin;
+ }
+QScrollBar:vertical {
+      border: 2px solid grey;
+      background:#55627f;
+      width: 15px;
+      margin: 22px 0 22px 0;
+  }
+  QScrollBar::handle:vertical {
+      background:  #55627f;
+      min-height: 20px;
+  }
+  QScrollBar::add-line:vertical {
+      border: 2px solid grey;
+      background:#55627f;
+      height: 20px;
+      subcontrol-position: bottom;
+      subcontrol-origin: margin;
+  }
+
+  QScrollBar::sub-line:vertical {
+   	  border: 2px solid grey;
+      background: #55627f;
+      height: 20px;
+      subcontrol-position: top;
+      subcontrol-origin: margin;
+  }
+ QDockWidget {
+    	border:2px solid gray;
+     titlebar-close-icon: url(close.png);
+     titlebar-normal-icon: url(undock.png);
+ }
+
+ QDockWidget::title {
+border:2px solid rgb(255, 79, 82);
+ 
+	border-left-style: none;
+	border-right-style: none;
+border-bottom-style: none;
+     text-align: left; /* текст выровнен по левому краю */
+     background: lightgray;
+     padding-left: 5px;
+ }
+
+ QDockWidget::close-button, QDockWidget::float-button {
+     border: 1px solid transparent;
+     background: darkgray;
+     padding: 0px;
+ }
+
+ QDockWidget::close-button:hover, QDockWidget::float-button:hover {
+     background: gray;
+ }
+
+ QDockWidget::close-button:pressed, QDockWidget::float-button:pressed {
+     padding: 1px -1px -1px 1px;
+ }
+
+QListWidget::item:selected {
+    alternate-background-color: yellow;
+	
+}
+
+
+
+ QListWidget::item:alternate {
+     background: #55627f;
+ }
+
+ QListWidget::item:selected {
+     border: 1px solid #6a6ea9;
+ }
+
+ QListWidget::item:selected:!active {
+     background: #55627f;
+ }
+
+ QListWidget::item:selected:active {
+     background:#55627f;
+ }
+
+ QListWidget::item:hover {
+     background: #55627f;
+ }
+
+QPushButton#evilButton {
+     background-color: red;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 10px;
+     border-color: beige;
+     font: bold 14px;
+     min-width: 10em;
+     padding: 6px;
+ }
+ QPushButton#evilButton:pressed {
+     background-color: #bac5c5;
+     border-style: inset;
+ }
+QTableView {
+    selection-background-color:#55627f;
+}
+QTableView QTableCornerButton::section {
+    background: #55627f;
+    border: 2px outset red;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>491</width>
+     <height>631</height>
+    </rect>
+   </property>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>100</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>search.png</normaloff>search.png</iconset>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider_2">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>17</y>
+      <width>241</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="tracking">
+     <bool>false</bool>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>50</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="toolTipDuration">
+     <number>-1</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>stop.png</normaloff>stop.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>140</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+border: 2px solid #1a647f;
+
+background-image: url(image.png);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>20</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>00:00</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>60</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>prev — копия.png</normaloff>prev — копия.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>50</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>play.png</normaloff>play.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>140</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Volume</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>445</x>
+      <y>20</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>00:00</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>110</y>
+      <width>181</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+    <property name="sliderPosition">
+     <number>50</number>
+    </property>
+    <property name="tracking">
+     <bool>false</bool>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>60</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>prev.png</normaloff>prev.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_8">
+    <property name="geometry">
+     <rect>
+      <x>465</x>
+      <y>110</y>
+      <width>20</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-style:0px;
+background:rgb(85, 170, 127,0);
+}</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>600</y>
+      <width>401</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>465</x>
+      <y>130</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-style:0px;
+background:rgb(85, 170, 127,0);
+}</string>
+    </property>
+    <property name="text">
+     <string>x</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>100</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../ViewModel/vk.png</normaloff>../ViewModel/vk.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>160</y>
+      <width>491</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft Tai Le</family>
+      <pointsize>9</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>160</y>
+      <width>491</width>
+      <height>441</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_9">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>600</y>
+      <width>81</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Pyamp</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_10">
+    <property name="geometry">
+     <rect>
+      <x>465</x>
+      <y>90</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>button_click_prev()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>426</x>
+     <y>433</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>show_dialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>256</x>
+     <y>423</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>show_dialog_vk()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>15</x>
+     <y>410</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>180</x>
+     <y>211</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>button_click_next()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>306</x>
+     <y>433</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>button_click_pause()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>236</x>
+     <y>383</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>listWidget</sender>
+   <signal>currentItemChanged(QListWidgetItem*,QListWidgetItem*)</signal>
+   <receiver>Form</receiver>
+   <slot>list_changed_track()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>270</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>268</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_2</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>Form</receiver>
+   <slot>seek_position()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>320</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>button_click_play()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>196</x>
+     <y>323</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>Form</receiver>
+   <slot>volume()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>529</x>
+     <y>450</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>96</x>
+     <y>623</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>250</x>
+     <y>326</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>check()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>39</x>
+     <y>623</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>250</x>
+     <y>326</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>cellChanged(int,int)</signal>
+   <receiver>Form</receiver>
+   <slot>change_tag()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>403</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>252</x>
+     <y>326</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>show_table()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>475</x>
+     <y>103</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>402</x>
+     <y>370</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>get_playlist_with_likes()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>475</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>402</x>
+     <y>370</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>button_click_play()</slot>
+  <slot>show_dialog()</slot>
+  <slot>volume()</slot>
+  <slot>button_click_pause()</slot>
+  <slot>button_click_next()</slot>
+  <slot>button_click_prev()</slot>
+  <slot>list_changed_track()</slot>
+  <slot>seek_position()</slot>
+  <slot>show_dialog_vk()</slot>
+  <slot>check_box()</slot>
+  <slot>slot2()</slot>
+  <slot>check()</slot>
+  <slot>slot3()</slot>
+  <slot>button_exit()</slot>
+  <slot>show_table()</slot>
+  <slot>slot4()</slot>
+  <slot>change_tag()</slot>
+  <slot>slot5()</slot>
+  <slot>delete_all_tracks()</slot>
+  <slot>get_playlist_with_likes()</slot>
+ </slots>
+</ui>
