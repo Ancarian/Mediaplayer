@@ -1,7 +1,7 @@
 import sys
 
-from Model.Logic.Pixel import *
-from Model.Entity.Player import *
+from Model.Logic.Pixel import Pixels
+from Model.Entity.Player import Player
 from Model.Logic.Search import Search
 from Model.Entity.SqlBase import SqlBase
 from Model.Logic.StringRedactor import *
@@ -12,11 +12,11 @@ from PyQt5.QtWidgets import QApplication, QDialog, QInputDialog, QSlider, QFileD
     QTableWidgetItem
 from PyQt5.uic import loadUiType
 
-from Model.Entity.Playlist import *
+from Model.Entity.Playlist import Playlist
 
 app = QApplication(sys.argv)
 app.setApplicationName('PyAmp')
-form_class, base_class = loadUiType('D:/CourseWork/PyAmp/View/Interface.ui')
+form_class, base_class = loadUiType('../View/Interface.ui')
 
 
 class MainWindow(QDialog, form_class):

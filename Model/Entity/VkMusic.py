@@ -1,7 +1,6 @@
 import vk_requests.exceptions
 import vk_requests.settings
 
-from vk_request import *
 
 
 class VkMusic():

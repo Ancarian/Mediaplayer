@@ -272,7 +272,7 @@ QTableView QTableCornerButton::section {
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>search.png</normaloff>search.png</iconset>
+      <normaloff>../Images/buttons/search.png</normaloff>../Images/buttons/search.png</iconset>
     </property>
     <property name="flat">
      <bool>true</bool>
@@ -331,7 +331,7 @@ QTableView QTableCornerButton::section {
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>stop.png</normaloff>stop.png</iconset>
+      <normaloff>../Images/buttons/stop.png</normaloff>../Images/buttons/stop.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -401,7 +401,7 @@ background-image: url(image.png);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>prev — копия.png</normaloff>prev — копия.png</iconset>
+      <normaloff>../Images/buttons/prev — копия.png</normaloff>../Images/buttons/prev — копия.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -439,7 +439,7 @@ background-image: url(image.png);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>play.png</normaloff>play.png</iconset>
+      <normaloff>../Images/buttons/play.png</normaloff>../Images/buttons/play.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -533,7 +533,7 @@ background-image: url(image.png);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>prev.png</normaloff>prev.png</iconset>
+      <normaloff>../Images/buttons/prev.png</normaloff>../Images/buttons/prev.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -633,7 +633,7 @@ background:rgb(85, 170, 127,0);
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../ViewModel/vk.png</normaloff>../ViewModel/vk.png</iconset>
+      <normaloff>../Images/buttons/vk.png</normaloff>../Images/buttons/vk.png</iconset>
     </property>
     <property name="iconSize">
      <size>
