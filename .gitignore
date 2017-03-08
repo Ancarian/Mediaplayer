@@ -1,4 +1,3 @@
-*.__pycache__
-*.Idea
-*__pycache__
-*Idea
+
+/.Idea
+/__pycache__
