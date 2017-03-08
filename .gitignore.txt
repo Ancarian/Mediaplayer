@@ -9,3 +9,5 @@ foo.txt
 *.[__pycache__]
 *.[idea]
 *.[.idea]
+/__pacache__
+/.idea
